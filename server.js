@@ -10,8 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/api/suggestions", async (req, res) => {
-    const OPENAI_API_KEY = process.env.API_KEY;
-    const openai = new OpenAI({ apiKey: OPENAI_API_KEY });
+    const openai = new OpenAI({ apiKey: "sk-proj-YYfUcSpMariFcLpAZM8nT3BlbkFJ2V7mnc9a0HWZ3g7DNOtw" });
     const aiModel = "gpt-3.5-turbo";
       const inpJson = req.query.inputs;
       if(inpJson && inpJson.length){
