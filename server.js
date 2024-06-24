@@ -37,11 +37,6 @@ app.get("/api/suggestions", async (req, res) => {
       }
   })
 
+const listener = app.listen(() => console.log(listener.address().port));
 
 
-
-
-
-
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
